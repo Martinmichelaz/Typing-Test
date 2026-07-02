@@ -17,6 +17,7 @@ await fetch("./levels.json")
 	let captlizedaWord= word.slice(0, 1).toUpperCase() + word.slice(1, word.length)
 		captlizedalist.push(captlizedaWord)
     })
+    console.log(data[level])
     totalNumberWords= data[level].length
   })
   .catch((error) => {
@@ -114,7 +115,7 @@ function chosingRandomWord(words){
 	if(selectDifficulty.value === "easy") {  timeCounter= 5} 
 	else if(selectDifficulty.value === "moderate") { timeCounter= 6} 
 	else if(selectDifficulty.value === "hard") { timeCounter= 7} 
-	else if(selectDifficulty.value === "too hard") { timeCounter= 9} 
+	else if(selectDifficulty.value === "imposible") { timeCounter = 9} 
 	totalTime= timeCounter
 if(wordsCounter === 0) timeCounter = totalTime * 2
 	}
