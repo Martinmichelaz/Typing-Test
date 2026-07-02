@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Typing Speed Test</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Ambient floating particles (purely decorative) -->
+  <div class="particles" aria-hidden="true">
+    <span></span><span></span><span></span><span></span>
+    <span></span><span></span><span></span><span></span>
+    <span></span><span></span><span></span><span></span>
+  </div>
+
+  <header>
+    <h1>Typing Speed Test</h1>
+    <p class="tagline">Type fast. Type exact.</p>
+  </header>
+
+  <main>
+
+    <!-- Difficulty selector -->
+    <div class="difficulty-panel">
+      <label for="difficulty">Choose your difficulty level</label>
+      <select id="difficulty">
+        <option value="" disabled selected hidden>Select difficulty</option>
+        <option value="easy">🟢 Easy</option>
+        <option value="moderate">🟡 Moderate</option>
+        <option value="hard">🟠 Hard</option>
+        <option value="tooHard">🔴 Too Hard</option>
+      </select>
+    </div>
+
+    <!-- Game area (shown once a difficulty is chosen) -->
+    <div class="container">
+      
+
+      <div class="game-top-row">
+	    <div class="wining-date" ></div>
+        <div class="timer-badge">
+          <span class="timer">0</span>
+          <span class="timer-label">sec left</span>
+        </div>
+        <div class="word-number-now"></div>
+      </div>
+
+      <div class="word-stage">
+        <div class="chosen-word"></div>
+        <div class="result-one-word"></div>
+        <input
+          type="text"
+          class="input-filed"
+          autocomplete="off"
+          autocapitalize="off"
+          spellcheck="false"
+          placeholder="Start typing the word above…"
+        >
+      </div>
+
+      <div class="words-panel">
+        <h2 class="words-panel-title">Remaining words</h2>
+        <div class="words"></div>
+      </div>
+    </div>
+
+    <!-- Rules / win / lose overlay gets its content injected by script.js -->
+    <div class="rules-message"></div>
+
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
